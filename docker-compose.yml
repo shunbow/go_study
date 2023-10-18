@@ -9,6 +9,8 @@ services:
       - ./app:/go/src/app
     depends_on:
       - mysql
+    environment:
+      MYSQL_HOST: mysql-container
   mysql:
     build: ./docker/mysql/
     volumes:
